@@ -38,13 +38,13 @@ public class Main {
 
         BufferedImage img2 = new BufferedImage(img.getWidth(), img.getHeight(), 1);
 
-        for (int i = 1; i < img.getWidth(); i++) {
+        for (int i = 0; i < img.getWidth(); i++) {
             for (int j = 0; j < img.getHeight(); j++) {
-                img2.setRGB(i, j, orijinal[img.getWidth() - i][j]);
+                img2.setRGB(i, j, orijinal[img.getWidth()-1 - i][j]);
             }
         }
 
-        File f = new File(path_to + s);
+        File f = new File(path_to + "photo"+s);
         String format = "jpg";
         ImageIO.write(img2, format, f);
     }
